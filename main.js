@@ -36,9 +36,8 @@ mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((err) => console.log(err));
 
 
-app.get("/", (req, res) => {
-    res.send("Hello World");
-})
+//all routes
+app.use("",require("./routes/routes"))
 
 app.listen(PORT, () => {
     console.log(`Sever started at PORT: ${PORT}`);
